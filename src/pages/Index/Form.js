@@ -14,7 +14,7 @@ const Form = () => {
         <GridItem colSpan={{ base: "2", md: "2", lg: "1" }}>
           <FormControl>
             <Input
-              placeholder="Miles From"
+              placeholder="Kilometers Radius"
               color="white"
               size={{ base: "lg" }}
             />
