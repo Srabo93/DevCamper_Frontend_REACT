@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme";
-import Login from "./pages/auth/Login";
+import Login from "./pages/auth/login/Login";
 
 const App = () => {
   return (
