@@ -2,4 +2,7 @@
   background-image: url("/public/img/showcase.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
 }
