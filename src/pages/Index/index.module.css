@@ -1,0 +1,5 @@
+.index_background {
+  background-image: url("/public/img/showcase.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
