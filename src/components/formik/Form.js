@@ -1,11 +1,10 @@
 import React from "react";
 import { VStack, Button } from "@chakra-ui/react";
 import { Formik } from "formik";
-import FormikControl from "../../../components/FormikControl";
-import * as Yup from "yup";
+import FormikControl from "./FormikControl";
+import ValidationControl from "./ValidationControl";
 
-const Form = ({ inputs, btn }) => {
-  //TODO SchemaControl, multiple Schema validations in a Switch Case
+const Form = ({ inputs, validation, btn }) => {
   let values = {};
   inputs.map((element) => {
     return (values[`${element.type}`] = "");
@@ -14,19 +13,7 @@ const Form = ({ inputs, btn }) => {
   return (
     <Formik
       initialValues={values}
-      validationSchema={Yup.object({
-        user: Yup.string()
-          .max(15, "Must be 15 characters or less")
-          .required("Required"),
-        email: Yup.string().email("Invalid email address").required("Required"),
-        password: Yup.string()
-          .max(15, "Must be 15 characters or less")
-          .min(6, "Must be 6 characters or greater")
-          .required("Required"),
-        // repeatpassword: Yup.string()
-        //   .oneOf([Yup.ref("password"), null], "Passwords must match")
-        //   .required("Required"),
-      })}
+      validationSchema={ValidationControl(validation)}
       onSubmit={(values, actions) => {
         alert(JSON.stringify(values, null, 2));
         actions.resetForm();

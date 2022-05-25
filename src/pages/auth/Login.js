@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Text, VStack, Link } from "@chakra-ui/react";
 import { LockIcon } from "@chakra-ui/icons";
 import Header from "./components/Header";
-import Form from "./components/Form";
+import Form from "../../components/formik/Form";
 
 const Login = () => {
   const typography = {
@@ -21,7 +21,11 @@ const Login = () => {
           icon={<LockIcon w={8} h={8} color="blue.400" />}
           typography={typography}
         />
-        <Form inputs={inputFields} btn={typography.context} />
+        <Form
+          inputs={inputFields}
+          validation="login"
+          btn={typography.context}
+        />
       </VStack>
       <Text>
         Forgot your Password?{" "}
