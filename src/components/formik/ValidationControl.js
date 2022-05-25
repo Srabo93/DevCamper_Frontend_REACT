@@ -13,8 +13,9 @@ const ValidationControl = (validation) => {
 
     case "register":
       return Yup.object({
-        user: Yup.string()
-          .max(15, "Must be 15 characters or less")
+        fullname: Yup.string()
+          .max(20, "Must be 20 characters or less")
+          .min(5, "Must be 5 characters or greater")
           .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
         password: Yup.string()

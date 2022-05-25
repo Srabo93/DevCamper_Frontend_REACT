@@ -12,7 +12,13 @@ const InputField = ({ label, ...props }) => {
   return (
     <FormControl isInvalid={meta.error && meta.touched}>
       <FormLabel>{label}</FormLabel>
-      <Field as={Input} {...field} {...props} />
+      <Field
+        as={Input}
+        {...field}
+        name={props.name}
+        type={props.type}
+        placeholder={props.placeholder}
+      />
       <FormErrorMessage>{meta.error}</FormErrorMessage>
     </FormControl>
   );

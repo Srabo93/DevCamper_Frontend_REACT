@@ -7,9 +7,8 @@ import ValidationControl from "./ValidationControl";
 const Form = ({ inputs, validation, btn }) => {
   let values = {};
   inputs.map((element) => {
-    return (values[`${element.type}`] = "");
+    return (values[`${element.name}`] = "");
   });
-
   return (
     <Formik
       initialValues={values}
@@ -32,7 +31,7 @@ const Form = ({ inputs, validation, btn }) => {
               <FormikControl
                 control="input"
                 type={element.type}
-                name={element.type}
+                name={element.name}
                 key={index}
                 placeholder={element.placeholder}
               />
