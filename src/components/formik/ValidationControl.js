@@ -25,6 +25,9 @@ const ValidationControl = (validation) => {
         repeatpassword: Yup.string()
           .oneOf([Yup.ref("password"), null], "Passwords must match")
           .required("Required"),
+        registeredUser: Yup.string().required(
+          "* You must be affiliated with the bootcamp in some way in order to add it to DevCamper."
+        ),
       });
     default:
       return null;

@@ -1,14 +1,13 @@
 import React from "react";
-import { VStack, Button } from "@chakra-ui/react";
+import { VStack, Button, RadioGroup } from "@chakra-ui/react";
 import { Formik } from "formik";
 import FormikControl from "./FormikControl";
 import ValidationControl from "./ValidationControl";
 
-const Form = ({ inputs, validation, btn }) => {
+const Form = ({ inputtype1, inputs, inputtype2, radio, validation, btn }) => {
   let values = {};
-  inputs.map((element) => {
-    return (values[`${element.name}`] = "");
-  });
+  inputs.map((element) => (values[`${element.name}`] = ""));
+  if (radio !== undefined) values["registeredUser"] = "";
   return (
     <Formik
       initialValues={values}
@@ -29,7 +28,7 @@ const Form = ({ inputs, validation, btn }) => {
           {inputs.map((element, index) => {
             return (
               <FormikControl
-                control="input"
+                control={inputtype1}
                 type={element.type}
                 name={element.name}
                 key={index}
@@ -37,6 +36,25 @@ const Form = ({ inputs, validation, btn }) => {
               />
             );
           })}
+          {radio.length > 0 ? (
+            <RadioGroup>
+              {radio.map((element, index) => {
+                return (
+                  <FormikControl
+                    key={index}
+                    control={inputtype2}
+                    type={element.type}
+                    name={element.name}
+                    label={element.label}
+                    value={element.value}
+                  />
+                );
+              })}
+            </RadioGroup>
+          ) : (
+            ""
+          )}
+          )
           <Button
             mt={5}
             type="submit"

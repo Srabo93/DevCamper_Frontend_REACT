@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Text, VStack, Link } from "@chakra-ui/react";
+import { Container, VStack } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 import Header from "./components/Header";
 import Form from "../../components/formik/Form";
@@ -20,6 +20,21 @@ const Register = () => {
       placeholder: "Confirm password",
     },
   ];
+
+  const radioOpt = [
+    {
+      type: "radio",
+      name: "registeredUser",
+      value: "user",
+      label: "Regular User (Browse,Review Bootcamps)",
+    },
+    {
+      type: "radio",
+      name: "registeredUser",
+      value: "publisher",
+      label: "Bootcamp Publisher",
+    },
+  ];
   return (
     <Container maxW="container.sm">
       <VStack w="full" h="full" spacing={5} alignItems="flex-start" py={10}>
@@ -28,17 +43,14 @@ const Register = () => {
           typography={typography}
         />
         <Form
+          inputtype1="input"
           inputs={inputFields}
+          inputtype2="radio"
+          radio={radioOpt}
           validation="register"
           btn={typography.context}
         />
       </VStack>
-      {/* <Text>
-        Forgot your Password?{" "}
-        <Link color="red.500" href="#">
-          Reset Password
-        </Link>
-      </Text> */}
     </Container>
   );
 };
