@@ -1,4 +1,4 @@
-import { Container, Flex, VStack } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import styles from "./index.module.css";
 import React from "react";
 import Header from "./Header";

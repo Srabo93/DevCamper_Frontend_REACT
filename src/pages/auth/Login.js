@@ -11,9 +11,8 @@ const Login = () => {
       "Log in to list your bootcamp or rate, review and favorite bootcamps",
   };
   const inputFields = [
-    "input",
-    { type: "email", placeholder: "Enter Email" },
-    { type: "password", placeholder: "Enter password" },
+    { type: "email", name: "email", placeholder: "Enter Email" },
+    { type: "password", name: "password", placeholder: "Enter password" },
   ];
   return (
     <Container maxW="container.sm">
@@ -23,7 +22,7 @@ const Login = () => {
           typography={typography}
         />
         <Form
-          inputtype="input"
+          inputtype1="input"
           inputs={inputFields}
           validation="login"
           btn={typography.context}
