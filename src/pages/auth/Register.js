@@ -10,7 +10,7 @@ const Register = () => {
     paragraph:
       "Register to list your bootcamp or rate, review and favorite bootcamps",
   };
-  const inputFields = [
+  const inputData = [
     { type: "fullname", name: "fullname", placeholder: "Enter Full Name" },
     { type: "email", name: "email", placeholder: "Enter Email" },
     { type: "password", name: "password", placeholder: "Enter password" },
@@ -21,7 +21,7 @@ const Register = () => {
     },
   ];
 
-  const radioOpt = [
+  const radioData = [
     {
       type: "radio",
       name: "registeredUser",
@@ -43,10 +43,10 @@ const Register = () => {
           typography={typography}
         />
         <Form
-          inputtype1="input"
-          inputs={inputFields}
-          inputtype2="radio"
-          radio={radioOpt}
+          typeInput="input"
+          inputData={inputData}
+          typeRadio="radio"
+          radioData={radioData}
           validation="register"
           btn={typography.context}
         />

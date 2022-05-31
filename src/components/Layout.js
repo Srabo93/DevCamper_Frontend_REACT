@@ -7,14 +7,15 @@ const Layout = () => {
     <>
       <Breadcrumb
         as="nav"
-        fontWeight="medium"
-        fontSize="large"
-        spacing="8px"
         position="fixed"
         w="full"
         padding={2}
-        bg="blackAlpha.900"
         color="white"
+        spacing="8px"
+        fontWeight="medium"
+        fontSize="large"
+        fontStyle="bold"
+        bg="blackAlpha.900"
         separator={<ChevronRightIcon color="gray.500" />}
       >
         <BreadcrumbItem>

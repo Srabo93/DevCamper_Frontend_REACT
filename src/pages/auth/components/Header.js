@@ -4,7 +4,7 @@ import { Flex, Heading, Text } from "@chakra-ui/react";
 const Header = ({ icon, typography }) => {
   return (
     <>
-      <Flex alignItems="center">
+      <Flex alignItems="center" pt={5}>
         {icon ?? icon}
         <Heading as="h3" fontSize="5xl">
           {typography.context}

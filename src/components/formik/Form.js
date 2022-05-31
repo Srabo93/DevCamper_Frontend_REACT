@@ -4,10 +4,17 @@ import { Formik } from "formik";
 import FormikRenderControl from "./FormikRenderControl";
 import ValidationControl from "./ValidationControl";
 
-const Form = ({ inputtype1, inputs, inputtype2, radio, validation, btn }) => {
+const Form = ({
+  typeInput,
+  inputData,
+  typeRadio,
+  radioData,
+  validation,
+  btn,
+}) => {
   let values = {};
-  inputs.map((element) => (values[`${element.name}`] = ""));
-  if (radio !== undefined) values["registeredUser"] = "";
+  inputData.map((element) => (values[`${element.name}`] = ""));
+  if (radioData !== undefined) values["registeredUser"] = "";
   return (
     <Formik
       initialValues={values}
@@ -25,8 +32,9 @@ const Form = ({ inputtype1, inputs, inputtype2, radio, validation, btn }) => {
           align="flex-start"
           w="full"
         >
-          {FormikRenderControl(inputs, inputtype1)}
-          {<RadioGroup>{FormikRenderControl(radio, inputtype2)}</RadioGroup>})
+          {FormikRenderControl(inputData, typeInput)}
+          {<RadioGroup>{FormikRenderControl(radioData, typeRadio)}</RadioGroup>}
+
           <Button
             mt={5}
             type="submit"

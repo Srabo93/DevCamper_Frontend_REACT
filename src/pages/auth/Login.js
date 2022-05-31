@@ -10,7 +10,7 @@ const Login = () => {
     paragraph:
       "Log in to list your bootcamp or rate, review and favorite bootcamps",
   };
-  const inputFields = [
+  const inputData = [
     { type: "email", name: "email", placeholder: "Enter Email" },
     { type: "password", name: "password", placeholder: "Enter password" },
   ];
@@ -22,8 +22,8 @@ const Login = () => {
           typography={typography}
         />
         <Form
-          inputtype1="input"
-          inputs={inputFields}
+          typeInput="input"
+          inputData={inputData}
           validation="login"
           btn={typography.context}
         />
