@@ -11,7 +11,9 @@ const Filter = () => {
       mb={[5, 0, 0]}
       spacing={3}
       alignItems="flex-start"
-      bg="lightgray"
+      boxShadow="lg"
+      rounded="md"
+      bg="white"
     >
       <Location />
       <ExtraFilterOptions />

@@ -1,7 +1,8 @@
 import React from "react";
 import { VStack } from "@chakra-ui/react";
 import Feature from "./Feature";
-const Bootcamp = ({ bootcamps }) => {
+import Pagination from "../../components/Pagination";
+const Bootcamp = ({ bootcamps, ...props }) => {
   return (
     <VStack
       w="full"
@@ -9,11 +10,14 @@ const Bootcamp = ({ bootcamps }) => {
       p={[0, 5, 10]}
       spacing={3}
       alignItems="flex-start"
-      bg="lightblue"
+      boxShadow="lg"
+      rounded="md"
+      bg="white"
     >
       {bootcamps.data.map((bootcamp, index) => (
         <Feature bootcamp={bootcamp} key={index} />
       ))}
+      <Pagination maxPageCount={bootcamps.pagination.next} {...props} />
     </VStack>
   );
 };

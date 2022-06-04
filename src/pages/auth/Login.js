@@ -15,7 +15,7 @@ const Login = () => {
     { type: "password", name: "password", placeholder: "Enter password" },
   ];
   return (
-    <Container maxW="container.sm">
+    <Container maxW="container.sm" boxShadow="lg" rounded="md" bg="white">
       <VStack w="full" h="full" spacing={5} alignItems="flex-start" py={10}>
         <Header
           icon={<LockIcon w={8} h={8} color="blue.400" />}
@@ -27,13 +27,13 @@ const Login = () => {
           validation="login"
           btn={typography.context}
         />
+        <Text>
+          Forgot your Password?{" "}
+          <Link color="red.500" href="#">
+            Reset Password
+          </Link>
+        </Text>
       </VStack>
-      <Text>
-        Forgot your Password?{" "}
-        <Link color="red.500" href="#">
-          Reset Password
-        </Link>
-      </Text>
     </Container>
   );
 };

@@ -7,6 +7,7 @@ import Register from "./pages/auth/Register";
 import Index from "./pages/index/Index";
 import Login from "./pages/auth/Login";
 import Bootcamps from "./pages/bootcamps/Bootcamps";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => {
           </Route>
         </Routes>
       </ChakraProvider>
+      <ReactQueryDevtools initialIsOpen={true} />
     </QueryClientProvider>
   );
 };

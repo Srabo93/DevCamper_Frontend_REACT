@@ -14,6 +14,9 @@ const Feature = ({ bootcamp }) => {
       <HStack w="full" py={[5, 5, 5]}>
         <SimpleGrid columns={3} spacing={3}>
           <Image
+            boxShadow="lg"
+            rounded="md"
+            bg="white"
             boxSize={{ base: "100", md: "150", lg: "200" }}
             mx={2}
             objectFit="cover"
@@ -42,15 +45,12 @@ const Feature = ({ bootcamp }) => {
           Offered Careers:{" "}
         </Text>
         {bootcamp.careers.map((career, index) => (
-          <>
-            <Divider orientation="vertical" colorScheme="blue" />
-            <Text as="p" fontSize={["sm", "md", "lg"]} key={index}>
-              {career}
-            </Text>
-          </>
+          <Text key={index} as="p" fontSize={["sm", "md", "lg"]}>
+            {career}
+          </Text>
         ))}
       </HStack>
-      <Divider colorScheme="blue" />
+      <Divider />
     </>
   );
 };

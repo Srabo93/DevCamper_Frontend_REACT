@@ -7,7 +7,6 @@ const Layout = () => {
     <>
       <Breadcrumb
         as="nav"
-        position="fixed"
         w="full"
         padding={2}
         color="white"
@@ -15,7 +14,7 @@ const Layout = () => {
         fontWeight="medium"
         fontSize="large"
         fontStyle="bold"
-        bg="blackAlpha.900"
+        bg="black"
         separator={<ChevronRightIcon color="gray.500" />}
       >
         <BreadcrumbItem>
@@ -28,11 +27,15 @@ const Layout = () => {
             Login
           </BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbItem as={Link} to="register">
-          <BreadcrumbLink>Register</BreadcrumbLink>
+        <BreadcrumbItem>
+          <BreadcrumbLink as={Link} to="register">
+            Register
+          </BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbItem as={Link} to="bootcamps">
-          <BreadcrumbLink>Bootcamps</BreadcrumbLink>
+        <BreadcrumbItem>
+          <BreadcrumbLink as={Link} to="bootcamps">
+            Bootcamps
+          </BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
 

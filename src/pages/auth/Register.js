@@ -36,7 +36,7 @@ const Register = () => {
     },
   ];
   return (
-    <Container maxW="container.sm">
+    <Container maxW="container.sm" boxShadow="lg" rounded="md" bg="white">
       <VStack w="full" h="full" spacing={5} alignItems="flex-start" py={10}>
         <Header
           icon={<AddIcon w={8} h={8} color="blue.400" />}

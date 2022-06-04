@@ -41,6 +41,7 @@ const Form = ({
             w="full"
             border="2px"
             borderColor="blue.500"
+            fontSize={{ base: "sm", md: "md" }}
           >
             {btn}
           </Button>
