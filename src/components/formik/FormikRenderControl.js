@@ -29,6 +29,18 @@ const FormikRenderControl = (inputs, inputtype) => {
           />
         );
       });
+    case "select":
+      return inputs.map((element, index) => {
+        return (
+          <FormikControl
+            control={inputtype}
+            key={index}
+            type={element.type}
+            name={element.name}
+            value={element.value}
+          />
+        );
+      });
     default:
       return null;
   }

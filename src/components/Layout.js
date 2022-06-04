@@ -24,12 +24,15 @@ const Layout = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <BreadcrumbLink as={Link} to="/login">
+          <BreadcrumbLink as={Link} to="login">
             Login
           </BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbItem as={Link} to="/register">
+        <BreadcrumbItem as={Link} to="register">
           <BreadcrumbLink>Register</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem as={Link} to="bootcamps">
+          <BreadcrumbLink>Bootcamps</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
 

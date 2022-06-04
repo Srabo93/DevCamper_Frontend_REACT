@@ -29,6 +29,18 @@ const ValidationControl = (validation) => {
           "* You must be affiliated with the bootcamp in some way in order to add it to DevCamper."
         ),
       });
+    case "findBootcamps":
+      return Yup.object({
+        distance: Yup.number()
+          .required()
+          .integer("Value must be a number")
+          .positive("only positive numbers"),
+        zipcode: Yup.number()
+          .required()
+          .integer("Value must be number")
+          .positive("only positive numbers"),
+      });
+
     default:
       return null;
   }

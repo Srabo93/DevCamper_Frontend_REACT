@@ -1,24 +1,28 @@
 import { Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme";
 import Layout from "./components/Layout";
 import Register from "./pages/auth/Register";
 import Index from "./pages/index/Index";
 import Login from "./pages/auth/Login";
+import Bootcamps from "./pages/bootcamps/Bootcamps";
 
 const App = () => {
+  const queryClient = new QueryClient();
   return (
-    <ChakraProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
+    <QueryClientProvider client={queryClient}>
+      <ChakraProvider theme={theme}>
+        <Routes>
+          {/* <Route path="/" element={<Layout />}> */}
           <Route index element={<Index />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-
-          {/* <Route path="*" element={<NoMatch />} /> */}
-        </Route>
-      </Routes>
-    </ChakraProvider>
+          <Route path="bootcamps" element={<Bootcamps />} />
+          {/* </Route> */}
+        </Routes>
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 };
 export default App;
