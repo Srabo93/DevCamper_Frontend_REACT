@@ -4,12 +4,11 @@ import Feature from "./Feature";
 const Bootcamp = ({ bootcamps }) => {
   return (
     <VStack
-      // w="full"
-      // h="full"
-      // p={[0, 5, 5]}
-      // spacing={5}
-      // alignItems="center"
-      // justifyContent="center"
+      w="full"
+      h="full"
+      p={[0, 5, 10]}
+      spacing={3}
+      alignItems="flex-start"
       bg="lightblue"
     >
       {bootcamps.data.map((bootcamp, index) => (

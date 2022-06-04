@@ -26,9 +26,8 @@ const Bootcamps = () => {
   return (
     <Container maxW="container.xl" p={0}>
       <Flex
-        h={{ base: "auto", lg: "100vh" }}
-        w={{ base: "auto", lg: "100vw" }}
-        p={[5, 10, 10]}
+        h="100vh"
+        py={[10, 10, 20]}
         direction={{ base: "column", lg: "row" }}
       >
         <Filter />

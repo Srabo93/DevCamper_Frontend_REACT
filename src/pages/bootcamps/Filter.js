@@ -5,10 +5,12 @@ import ExtraFilterOptions from "./ExtraFilterOptions";
 const Filter = () => {
   return (
     <VStack
-      mb={[5]}
-      p={[5, 10, 15]}
+      h="full"
+      w={{ base: "full", lg: "80" }}
+      p={[5, 5, 10]}
+      mb={[5, 0, 0]}
       spacing={3}
-      alignItems="center"
+      alignItems="flex-start"
       bg="lightgray"
     >
       <Location />

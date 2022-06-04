@@ -14,12 +14,12 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <ChakraProvider theme={theme}>
         <Routes>
-          {/* <Route path="/" element={<Layout />}> */}
-          <Route index element={<Index />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="bootcamps" element={<Bootcamps />} />
-          {/* </Route> */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Index />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+            <Route path="bootcamps" element={<Bootcamps />} />
+          </Route>
         </Routes>
       </ChakraProvider>
     </QueryClientProvider>

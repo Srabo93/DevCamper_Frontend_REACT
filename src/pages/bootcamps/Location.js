@@ -9,7 +9,7 @@ const Location = () => {
   ];
   return (
     <>
-      <Heading fontSize="2xl" as="h6">
+      <Heading as="h3" pb={2} fontSize={["lg", "2xl", "3xl"]}>
         By Location
       </Heading>
       <Form
